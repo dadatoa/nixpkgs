@@ -1,0 +1,9 @@
+services:
+  nix:
+    image: nixos/nix
+    platform: "linux/amd64"
+    working_dir: /nixpkgs/nixos
+    environment:
+      - NIXPKGS_ALLOW_UNFREE=1
+    volumes:
+      - .:/nixpkgs
